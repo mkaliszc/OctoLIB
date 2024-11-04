@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:03:10 by mkaliszc          #+#    #+#             */
-/*   Updated: 2024/11/03 01:20:36 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2024/11/04 22:00:24 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # ifndef HEX
 #  define HEX "0123456789abcdef"
-# endif
-
-# ifndef HEX_UP
-#  define HEX_UP "0123456789ABCDEF"
 # endif
 
 # include <stdarg.h>
