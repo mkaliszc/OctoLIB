@@ -1,4 +1,5 @@
 NAME = libft.a
+
 FT = is/ft_isdigit is/ft_isprint is/ft_isalpha is/ft_isascii is/ft_isalnum \
     ft_toupper ft_tolower \
     mem/ft_memset mem/ft_bzero mem/ft_calloc mem/ft_memchr mem/ft_memcmp mem/ft_memcpy  mem/ft_memmove \
@@ -10,24 +11,26 @@ FT = is/ft_isdigit is/ft_isprint is/ft_isalpha is/ft_isascii is/ft_isalnum \
     ft_printf/ft_hexa_printf ft_printf/ft_put_printf ft_printf/ft_printf \
 
 SOURCES = $(addprefix src/, $(addsuffix .c, $(FT)))
-OBJECTS = $(SOURCES:.c=.o)
+OBJS = $(addprefix obj/, $(addsuffix .o, $(FT)))
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -Iinclude
 AR = ar
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
+obj/%.o: src/%.c
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
 	$(AR) -rcs $@ $^
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) $<
-
 clean:
-	rm -f $(OBJECTS)
+	rm -rf $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
