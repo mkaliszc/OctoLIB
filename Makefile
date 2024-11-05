@@ -1,57 +1,18 @@
 NAME = libft.a
-SOURCES = \
-    ft_strlen.c \
-    ft_isdigit.c \
-    ft_isprint.c \
-    ft_isalpha.c \
-    ft_isascii.c \
-    ft_toupper.c \
-    ft_tolower.c \
-    ft_strncmp.c \
-    ft_isalnum.c \
-    ft_memset.c \
-    ft_bzero.c \
-    ft_atoi.c \
-    ft_calloc.c \
-    ft_memchr.c \
-    ft_memcmp.c \
-    ft_memcpy.c \
-    ft_memmove.c \
-    ft_strchr.c \
-    ft_strdup.c \
-    ft_strlcat.c \
-    ft_strlcpy.c \
-    ft_strnstr.c \
-    ft_strrchr.c \
-	ft_substr.c \
-	ft_strjoin.c \
-	ft_strtrim.c \
-    ft_split.c \
-    ft_itoa.c \
-    ft_strmapi.c \
-    ft_striteri.c \
-    ft_putchar_fd.c \
-    ft_putstr_fd.c \
-    ft_putendl_fd.c \
-    ft_putnbr_fd.c \
+SOURCES = is/ft_isdigit  is/ft_isprint  is/ft_isalpha  is/ft_isascii  is/ft_isalnum \
+    ft_toupper   ft_tolower \
+    mem/ft_memset  mem/ft_bzero  mem/ft_calloc  mem/ft_memchr  mem/ft_memcmp  mem/ft_memcpy  mem/ft_memmove \
+    str/ft_strlen  str/ft_strncmp  str/ft_atoi  str/ft_strchr  str/ft_strdup  str/ft_strlcat  str/ft_strlcpy  str/ft_strnstr  str/ft_strrchr \
+    str/ft_substr  str/ft_strjoin  str/ft_strtrim  str/ft_split  str/ft_itoa  str/ft_strmapi  str/ft_striteri \
+    fd/ft_putchar_fd  fd/ft_putstr_fd  fd/ft_putendl_fd  fd/ft_putnbr_fd \
+    lst/ft_lstnew  lst/ft_lstadd_front  lst/ft_lstsize  lst/ft_lstlast  lst/ft_lstadd_back  lst/ft_lstdelone  lst/ft_lstclear  lst/ft_lstiter  lst/ft_lstmap \
+    get_next_line/get_next_line \
+    ft_printf/ft_hexa_printf ft_printf/ft_put_printf ft_printf/ft_printf \
 
-BONUS = \
-    ft_lstnew.c \
-    ft_lstadd_front.c \
-    ft_lstsize.c \
-    ft_lstlast.c \
-    ft_lstadd_back.c \
-    ft_lstdelone.c \
-    ft_lstclear.c \
-    ft_lstiter.c \
-    ft_lstmap.c \
-
+SOURCES = $(addprefix src/, $(addsuffix .c, $(FILES)))
 OBJECTS = $(SOURCES:.c=.o)
-
-OBJECTS_BONUS = $(BONUS:.c=.o)
-
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I
 AR = ar
 
 all: $(NAME)
@@ -62,16 +23,13 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) -c $(CFLAGS) $<
 
-bonus: $(NAME) $(OBJECTS_BONUS)
-	$(AR) -rcs $(NAME) $(OBJECTS_BONUS)
-
 clean:
-	rm -f $(OBJECTS) $(OBJECTS_BONUS)
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
  
