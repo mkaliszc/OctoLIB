@@ -27,7 +27,7 @@ $(NAME): $(OBJS)
 	$(AR) -rcs $@ $^
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf obj
 
 fclean: clean
 	rm -rf $(NAME)
