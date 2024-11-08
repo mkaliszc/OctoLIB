@@ -1,6 +1,6 @@
 NAME = libft.a
 
-FT = is/ft_isdigit is/ft_isprint is/ft_isalpha is/ft_isascii is/ft_isalnum \
+FT = is/ft_isdigit is/ft_isprint is/ft_isalpha is/ft_isascii is/ft_isalnum is/ft_isspace \
     ft_toupper ft_tolower \
     mem/ft_memset mem/ft_bzero mem/ft_calloc mem/ft_memchr mem/ft_memcmp mem/ft_memcpy  mem/ft_memmove \
     str/ft_strlen str/ft_strncmp str/ft_atoi str/ft_strchr str/ft_strdup str/ft_strlcat str/ft_strlcpy str/ft_strnstr str/ft_strrchr \

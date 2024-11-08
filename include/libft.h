@@ -31,6 +31,7 @@ int		ft_isdigit(int arg);
 int		ft_isalnum(int arg);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 int		ft_atoi(const char *str);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
