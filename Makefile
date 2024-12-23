@@ -24,13 +24,13 @@ obj/%.o: src/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(AR) -rcs $@ $^
+	@$(AR) -rcs $@ $^
 
 clean:
-	rm -rf obj
+	@rm -rf obj
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
