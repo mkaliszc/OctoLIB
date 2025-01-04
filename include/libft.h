@@ -78,6 +78,7 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_free_char_tab(char **tab);
+void	ft_free_int_tab(int **tab, int size);
 
 int		ft_printf(const char *str, ...);
 int		ft_putchar_m(int c);
