@@ -6,7 +6,7 @@
 /*   By: mkaliszc <mkaliszc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 18:00:42 by mkaliszc          #+#    #+#             */
-/*   Updated: 2025/01/02 18:03:43 by mkaliszc         ###   ########.fr       */
+/*   Updated: 2025/01/04 21:19:59 by mkaliszc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_free_int_tab(int **tab, int size)
 	int	i;
 
 	i = 0;
-	if(!*tab)
+	if (!*tab)
 		return ;
 	while (i < size)
 	{
@@ -26,4 +26,3 @@ void	ft_free_int_tab(int **tab, int size)
 	}
 	free(tab);
 }
-
