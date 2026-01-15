@@ -31,6 +31,8 @@ int	fd_handle_format(int fd, va_list arg, const char str)
 		count = fd_puthexa(fd, va_arg(arg, unsigned int), count);
 	else if (str == 'X')
 		count = fd_puthexa_upper(fd, va_arg(arg, unsigned int), count);
+	else if (str == 'l')
+		count = fd_putlong(fd, va_arg(arg, long));
 	else if (str == '%')
 		count = fd_putchar_m(fd, '%');
 	return (count);
