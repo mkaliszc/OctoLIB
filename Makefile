@@ -12,6 +12,7 @@ FT = is/ft_isdigit is/ft_isprint is/ft_isalpha is/ft_isascii is/ft_isalnum is/ft
     lst/ft_lstnew lst/ft_lstadd_front lst/ft_lstsize lst/ft_lstlast lst/ft_lstadd_back lst/ft_lstdelone lst/ft_lstclear lst/ft_lstiter lst/ft_lstmap \
     get_next_line/get_next_line \
     ft_printf/ft_hexa_printf ft_printf/ft_put_printf ft_printf/ft_printf \
+    printf_fd/printf_fd_utils printf_fd/printf_fd \
 
 SOURCES = $(addprefix src/, $(addsuffix .c, $(FT)))
 OBJS = $(addprefix obj/, $(addsuffix .o, $(FT)))
