@@ -90,6 +90,7 @@ int		ft_putstr_m(char *str);
 int		ft_putptr(void *ptr);
 int		ft_putint(int nbr);
 int		ft_putint_unsigned(int nbr);
+int		ft_putlong(long nbr);
 int		ft_puthexa_upper(unsigned long nb, int n);
 int		ft_puthexa(unsigned long nb, int n);
 
@@ -100,6 +101,7 @@ int		fd_putchar_m(int fd, int c);
 int		fd_putstr_m(int fd, char *str);
 int		fd_putint(int fd, int nbr);
 int		fd_putint_unsigned(int fd, int nbr);
+int		fd_putlong(int fd, long nbr);
 int		fd_puthexa(int fd, unsigned long nb, int n);
 int		fd_puthexa_upper(int fd, unsigned long nb, int n);
 int		fd_putptr(int fd, void *ptr);

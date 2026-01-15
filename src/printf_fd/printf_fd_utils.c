@@ -65,6 +65,25 @@ int	fd_putint_unsigned(int fd, int nbr)
 	return (i);
 }
 
+int fd_putlong(int fd, long nbr)
+{
+    int     i;
+    long    nb;
+    
+    i = 0;
+    nb = nbr;
+    if (nb < 0)
+    {
+        nb = -nb;
+        i += fd_putchar_m(fd, '-');
+    }
+    if (nb > 9)
+        i += fd_putlong(fd, nb / 10);
+    i += fd_putchar_m(fd, (nb % 10) + '0');
+    return (i);
+}
+
+
 int	fd_puthexa(int fd, unsigned long nb, int n)
 {
 	if (nb > 15)

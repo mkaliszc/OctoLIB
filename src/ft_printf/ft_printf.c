@@ -31,6 +31,8 @@ int	ft_handle_format(va_list arg, const char str)
 		count = ft_puthexa(va_arg(arg, unsigned int), count);
 	else if (str == 'X')
 		count = ft_puthexa_upper(va_arg(arg, unsigned int), count);
+	else if (str == 'l')
+		count = ft_putlong(va_arg(arg, long)) ;
 	else if (str == '%')
 		count = ft_putchar_m('%');
 	return (count);

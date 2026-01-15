@@ -60,3 +60,21 @@ int	ft_putint_unsigned(int nbr)
 	i += ft_putchar_m((nb % 10) + '0');
 	return (i);
 }
+
+int ft_putlong(long nbr)
+{
+    int     i;
+    long    nb;
+    
+    i = 0;
+    nb = nbr;
+    if (nb < 0)
+    {
+        nb = -nb;
+        i += ft_putchar_m('-');
+    }
+    if (nb > 9)
+        i += ft_putlong(nb / 10);
+    i += ft_putchar_m((nb % 10) + '0');
+    return (i);
+}
